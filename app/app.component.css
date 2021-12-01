@@ -1,0 +1,63 @@
+
+  audio{
+    min-width: 400px;
+    height: auto;
+    object-fit: inherit;
+}
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  a{
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+  
+h6{
+  color: whitesmoke;
+}
+
+
+  

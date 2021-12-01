@@ -1,0 +1,64 @@
+<div class="content">
+  <div class="box"><h2>OCR</h2></div>
+
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+    <div class="box">
+    
+
+
+
+      <div>
+        <input type="file" name="profile" (change)="onFileChanged($event)" />
+      </div>
+
+
+
+
+      <div>
+        <button class="btn btn-primary" type="submit">Upload</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="box" *ngIf="isDisplay">
+    <div class="loader"></div>
+  </div>
+
+  <div class="box1">
+    <div class="total">
+      <div class="holder" [ngClass]="[stage1 === true ? 'bg-success' : 'bg-secondary' ]">
+        <i class="fa fa-check-circle fa-5x"  [ngClass]="[stage1 === true ? 'white' :'black'  ]" ></i>
+      </div>
+      <div>
+        <h5>OCR</h5>
+      </div>
+    </div>
+
+    <div class="total">
+      <div class="holder" [ngClass]="[stage2 === true ? 'bg-success' : 'bg-secondary' ]">
+        <i class="fa fa-check-circle fa-5x"  [ngClass]="[stage1 === true ? 'white' :'black'  ]" ></i>
+      </div>
+      <div>
+        <h5>Summarization</h5>
+      </div>
+    </div>
+    <div class="total">
+      <div class="holder" [ngClass]="[stage3 === true ? 'bg-success' : 'bg-secondary' ]">
+        <i class="fa fa-check-circle fa-5x"  [ngClass]="[stage1 === true ? 'white' :'black'  ]" ></i>
+      </div>
+      <div>
+        <h5>Speech</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div id="result">
+      <div style="display: flex; justify-content: center">
+        <h3></h3>
+      </div>
+
+     
+    </div>
+  </div>
+</div>

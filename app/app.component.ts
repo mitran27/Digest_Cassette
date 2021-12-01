@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent {
+  name;
+  title = 'digestAudio';
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {}
+}

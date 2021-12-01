@@ -1,0 +1,55 @@
+<div class="content">
+  <div class="box"><h2>Web Scrapping</h2></div>
+
+  <div class="box">
+   
+    <div>
+      <label for="">Title:</label>
+      <input [(ngModel)]="title" type="text" />
+    </div>
+
+    <div>
+      <label for="">Lines:</label>
+      <input [(ngModel)]="lines" type="number" />
+    </div>
+
+    <div>
+      <button class="btn btn-primary" (click)="onSubmit()" type="submit">
+        Scrape
+      </button>
+    </div>
+  </div>
+
+  <div class="box" *ngIf="isDisplay">
+    <div class="loader"></div>
+  </div>
+
+  <div class="box1">
+    <div class="total">
+      <div class="holder" [ngClass]="[stage1 === true ? 'bg-success' : 'bg-secondary' ]">
+        <i class="fa fa-check-circle fa-5x"  [ngClass]="[stage1 === true ? 'white' :'black'  ]" ></i>
+      </div>
+      <div>
+        <h5>Summarisation</h5>
+      </div>
+    </div>
+
+    <div class="total">
+      <div class="holder" [ngClass]="[stage2 === true ? 'bg-success' : 'bg-secondary' ]">
+        <i class="fa fa-check-circle fa-5x"  [ngClass]="[stage1 === true ? 'white' :'black'  ]" ></i>
+      </div>
+      <div>
+        <h5>Speech</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div id="result">
+      <div style="display: flex; justify-content: center">
+        <h3></h3>
+      </div>
+
+    </div>
+  </div>
+</div>

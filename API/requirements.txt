@@ -1,0 +1,7 @@
+opencv-python-headless
+pyclipper
+fastapi
+numpy
+Pillow
+uvicorn
+onnxruntime
