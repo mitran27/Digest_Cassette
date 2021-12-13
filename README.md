@@ -1,6 +1,29 @@
 Designed and Developed an AI Powered Application which convert’s given text Image to a summarized podcast
 
 
+the system design for the entire application is given below
+
+
+![design](https://user-images.githubusercontent.com/62206653/145774647-0869f735-7882-4bb5-8d48-75b83a9bc98a.png)
+
+<h1> Segmentation </h1>
+
+The input image is segmented to find the text locations using FPN and differentiable binarization network
+
+![seg](https://user-images.githubusercontent.com/62206653/145774446-2987a36c-270b-4cc9-aea1-cbb75a0a0ee8.jpeg)
+
+
+<h1> Recognition </h1>
+
+The text locations are croped and recognized
+![ocr1](https://user-images.githubusercontent.com/62206653/145774520-b6d23888-c712-4aea-af4a-19c087846388.jpeg)
+
+The recognized text is sorted and sent to summarization model
+
+<h1> Summarization </h1>
+
+the text is summarized using transformers
+
 Sample Result-1:
 
 <b>Source:</b> 
@@ -39,9 +62,28 @@ birthday party s laga aamir summend
 summstart geeta, babita, phogat family attend 
 aamir s birthday party summend
 
+<h1> Aligner </h1>
 
 
 the summarized text is converted to spectrogram using sequence to sequence model with location awareness
 
-<audio src="/output/spectrogram.wav" controls preload></audio>
+
+
+https://user-images.githubusercontent.com/62206653/145774055-396b547e-58c9-40cc-907c-6776443038b8.mp4
+
+output without location awarness be like
+
+![wolocationawr](https://user-images.githubusercontent.com/62206653/145774243-59e726c3-b6ae-4873-805c-c8cc2ffcfaca.png)
+
+<h1> Vocoder </h1>
+
+The spectrgroam generates the audio using Generative adversial network
+
+
+https://user-images.githubusercontent.com/62206653/145774069-dc0c567a-9a74-429a-9975-da621f0bc016.mp4
+
+The final end application built using angular and fastapi is displayed below
+
+
+![WhatsApp Image 2021-11-27 at 1 25 28 AM](https://user-images.githubusercontent.com/62206653/145774340-3c9e7b00-94a5-4d7b-9e98-3ecc8c5d21ec.jpeg)
 
