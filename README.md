@@ -38,3 +38,12 @@ birthday party s laga aamir summend
 <b>Ground truth</b>:
 summstart geeta, babita, phogat family attend 
 aamir s birthday party summend
+
+
+
+the summarized text is converted to spectrogram using sequence to sequence model with location awareness
+
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+</audio>
+
