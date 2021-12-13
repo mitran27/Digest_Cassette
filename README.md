@@ -43,7 +43,5 @@ aamir s birthday party summend
 
 the summarized text is converted to spectrogram using sequence to sequence model with location awareness
 
-<audio controls>
-  <source src="/output/spectrgoram.wav" type="audio/ogg">
-</audio>
+<audio src="/output/spectrogram.wav" controls preload></audio>
 
